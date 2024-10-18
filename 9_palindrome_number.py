@@ -13,5 +13,7 @@ case2 = Solution().isPalindrome(-121)
 
 case3 = Solution().isPalindrome(10)
 
-if case1 == True and case2 == False and case3 == False:
+case4 = Solution().isPalindrome('racecar')
+
+if case1 == True and case2 == False and case3 == False and case4 == True:
     print('All test cases pass')

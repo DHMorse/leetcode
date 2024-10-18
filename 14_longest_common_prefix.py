@@ -17,5 +17,7 @@ case1 = Solution().longestCommonPrefix(["flower","flow","flight"])
 
 case2 = Solution().longestCommonPrefix(["dog","racecar","car"])
 
-if case1 == 'fl' and case2 == '':
+case3 = Solution().longestCommonPrefix(["a"])
+
+if case1 == 'fl' and case2 == '' and case3 == 'a':
     print('All test cases pass')
