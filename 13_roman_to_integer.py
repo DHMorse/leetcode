@@ -1,26 +1,16 @@
-from typing import List
-
+from typing import Dict
 
 class Solution:
     def romanToInt(self, s: str) -> int:
-        roman_dict = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
-        }
+        romanStrToIntDict: Dict[str, int] = { 'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000 }
         total = 0
-        for i in range(len(s)):
-            try:
-                if roman_dict[s[i]] < roman_dict[s[i + 1]]:
-                    total -= roman_dict[s[i]]
+        for index, char in enumerate(s):
+            if index + 1 < len(s):
+                if romanStrToIntDict[char] < romanStrToIntDict[s[index + 1]]:
+                    total -= romanStrToIntDict[char]
                 else:
-                    total += roman_dict[s[i]]
-            except:
-                total += roman_dict[s[i]]
+                    total += romanStrToIntDict[char]
+        total += romanStrToIntDict[char]
         return total
 
 case1 = Solution().romanToInt('III')
